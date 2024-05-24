@@ -1,71 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
 <?php header('Content-Type: text/html; charset=utf-8'); ?>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
-<!-- Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
 
-<!-- Optional theme -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<style>
-body {
-  background-color:#262626;
-  background-color:#111;
-  color:#FFF;
-}
-/* .panel {
-  background-color:#202020;
-  color:#FFF;
-} */
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
 
-select, select:active,
-input, input:active, input:focus,
-.card, .jumbotron, 
-.form-control, .form-control:active, .form-control:focus,
-.form-select, .form-select:active, .form-select:focus {
-  background-color:#303030;
-  color:#FFF;
-}
 
-.description {
-  color: #888;
-}
+<!-- /* ────────────────────────────────────────────────────────────────────────── */ -->
+<!-- /*                               CODE HIGHLIGHT                               */ -->
+<!-- /* ────────────────────────────────────────────────────────────────────────── */ -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
-li.active {
-  background-color:#303030;
-}
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
 
-footer {
-  color:grey;
-  background-color: rgb(0, 0, 0, 70%);
-  text-align:center;
-  position:fixed;
-  width:100%;
-  margin-top:100%;
-  bottom:0px;
-}
+<script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/code-input.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@2.2/code-input.min.css">
 
-.container {
-  margin-bottom: 100px;
-}
+<!-- Plugins -->
+<script src="js/hljs_autodetect.js"></script>
+<script src="js/hljs_indent.js"></script>
+<!-- /* ────────────────────────────────────────────────────────────────────────── */ -->
 
-.content {
-  display:none;
-}
-</style>
+<!--In the <head>-->
 
 <title>Rand</title>
 
-<body>
+<body class="theme-dark">
+<?php include_once("functions.php"); ?>
 <?php include_once("navbar.php"); ?>
 <br>
 <div class="container">
@@ -92,79 +63,186 @@ foreach (glob("modules/*.php") as $module) {
 
 <script>
 $( document ).ready(function() {
+
+  /* ───────────────────────────────────────────────────────────────────── */
+  /*                               Code Input                              */
+  /* ───────────────────────────────────────────────────────────────────── */
+  // hljs.highlightAll();
+  codeInput.registerTemplate("default", codeInput.templates.hljs(hljs, [
+    new codeInput.plugins.Autodetect(),
+    new codeInput.plugins.Indent(true, 2) // 2 spaces indentation
+  ] /* Array of plugins (see below) */));
+  $(".code").on("paste", function() {
+    this.style.height = "auto";
+  });
+
+  /* ───────────────────────────────────────────────────────────────────── */
+  /*                               setAction                               */
+  /* ───────────────────────────────────────────────────────────────────── */
+  function setFormVal(form, name = "action", value = "") {
+    console.log("[setFormVal] Setting form value "+name+" to: "+value);
+    $(form).find(".setFormVal[name='"+name+"']").remove();
+    var hiddenInput = $("<input>")
+      .attr("class", "setFormVal")
+      .attr("type", "hidden")
+      .attr("name", name).val(value);
+    $(form).append(hiddenInput);
+  }
+
+
+  /* ───────────────────────────────────────────────────────────────────── */
+  /*                                navigate                               */
+  /* ───────────────────────────────────────────────────────────────────── */
+  function navigate(to) {
+
+    console.log("[navigate] Navigating to: "+to)
+
+    // Reset all nav links
+    var navLinks = $(".link.nav-link");
+    navLinks.prop("class", "link nav-link");
+
+    // Set this nav link as active
+    var navLink = $(`.link.nav-link[href='${to}']`);
+    navLink.prop("class", "link nav-link link-success active");
+    
+    $(".content").hide();
+    $(to).fadeIn();
+
+  }
+
+  /* ───────────────────────────────────────────────────────────────────── */
+  /*                             randomizeDice                             */
+  /* ───────────────────────────────────────────────────────────────────── */
+  function randomizeDice() {
+    var dice = [1, 2, 3, 4, 5, 6];
+    var diceIcon = dice[Math.floor(Math.random()*dice.length)];
+    $(".dice").html('<i class="bi bi-dice-'+diceIcon+'"></i>');
+  }
+  randomizeDice();
+
+  /* ────────────────────────────────────────────────────────────────────────── */
+  /*                               Copy to clipboard                            */
+  /* ────────────────────────────────────────────────────────────────────────── */
+  $(".copyText").click(function() {
+    var copyText = $(this).closest(".responseDiv");
+    copyText.select();
+    // copyText[0].setSelectionRange(0, 99999); /* For mobile devices */
+    document.execCommand("copy");
+    $(this).html("<?= icon("check") ?> Copied!");
+    $(this).addClass("btn-success");
+  });
+
+  /* ───────────────────────────────────────────────────────────────────── */
+  /*                              Form submit                              */
+  /* ───────────────────────────────────────────────────────────────────── */
     //function submitForm(formname, responseid) {
     $(".form").submit(function(e) {
         e.preventDefault(); // avoid to execute the actual submit of the form.
     
-        var form = $(this);
-        // var form = $("#"+formname);
+        var form          = $(this);
+
+        // Set clicken `.genBtn` as form value
+        var clickedGenBtn = $('.genBtn:focus');
+
+        // Set response type
+        if (form.data("responsetype")) {
+          var responsetype = form.data("responsetype");
+        } else {
+          var responsetype = "html";
+        }
+        setFormVal(form, "responsetype", responsetype);
+
+        // Set form action
+        if (form.data("action")) {
+          var action = form.data("action");
+        }
+        if (form.find("input[name=action]").length) {
+          var action = form.find("input[name=action]").val();
+        }
+        setFormVal(form, "action", action)
+
+        // Set clicked button as form value
+        if (clickedGenBtn.length) {
+          var name          = clickedGenBtn.length ? clickedGenBtn.attr("name") : "";
+          var value         = clickedGenBtn.length ? clickedGenBtn.attr("value") : "";
+          if (name != "action" && name != "") {
+            setFormVal(form, name, value);
+          }
+        } 
+        
+        // NOTE: This is not needed because we are checking for the response object type
+        //       in the showData function.
+        // Determine response type (text or HTML)
+        // var responseType = form.data("responseType");
+        // if (responseType == undefined) {
+        //   responseType = "html";
+        // }
+
+        // Send form
         var url = form.attr('action');
-        var responseid = form.prop('id')+'response';
-        console.log("Generating through "+form.prop('id')+" to "+responseid);
+        var responseObj = form.find(".responseDiv");
+
+        var btnName = $("button[clicked=true]").prop("name");
+        var btnValue = $("button[clicked=true]").val();
+
+        var serializeForm = form.serialize()+"&"+btnName+"="+btnValue;
+        console.log("[submitForm] Sending form: "+serializeForm);
+
+        function showData(obj, data) {
+          if (obj.is("div")) {
+            obj.html(data);
+          } else if (obj.is("code-input")) {
+            obj.val(data.trim());
+          } else {
+            data = data.replace(/<(.|\n)*?>/g, '');
+            obj.val(data.trim());
+          }
+        }
+
         $.ajax({
                type: "POST",
                url: url,
-               data: form.serialize(), // serializes the form's elements.
+               data: serializeForm, // serializes the form's elements.
                beforeSend: function()
                {
-                  $("#"+responseid).html('<h3>Generating...</h3>'); // show loading
+                  showData(responseObj, 'Generating...'); // show loading
                },
                error: function(data)
                {
                   console.log(data);
-                  $("#"+responseid).html("<div class='alert alert-danger'>Error: "+data.statusText+"</div>");
+                  if (responsetype == "html") {
+                    showData(responseObj, "<div class='alert alert-danger'>Error: "+data.statusText+"</div>");
+                  } else {
+                    showData(responseObj, "Error: "+data.statusText);
+                  }
                },
                success: function(data){
-                  $("#"+responseid).html(data); // show response from the php script.
+                showData(responseObj, data);
                }
+      });
+      randomizeDice();
     });
-    });
-    //}
 
-
-    // submitForm("base64decode", "base64decoderesponse");
-    // submitForm("base64encode", "base64encoderesponse");
-    // submitForm("sha512hasher", "sha512hasherresponse");
-    // submitForm("sha256hasher", "sha256hasherresponse");
-    // submitForm("sha1hasher", "sha1hasherresponse");
-    // submitForm("md5hasher", "md5hasherresponse");
-    // submitForm("numgen", "numgenresponse");
-    // submitForm("stringgen", "stringgenresponse");
-    // submitForm("hex2bin", "hex2binresponse");
-    // submitForm("bin2hex", "bin2hexresponse");
-    // submitForm("rot", "bin2hexresponse");
-
+    /* ───────────────────────────────────────────────────────────────────── */
+    /*                      Navigation (and hash check)                      */
+    /* ───────────────────────────────────────────────────────────────────── */
     if (window.location.hash != '' && window.location.hash != undefined) {
-    var hash = window.location.hash;
-    var afterhash = hash.replace('#','');
-    $(".content").hide();
-    $(hash).fadeIn(1000);
-    $(".nav-link").parent().prop("class", "");
-    $("#nav"+afterhash).parent().prop("class", "nav-item active");
-    console.log("Hash detected: "+hash+", setting nav"+afterhash+" parent as the active tab.");
+      // Hash is set on page load, so navigate to it
+      var hash      = window.location.hash;
+      var afterhash = hash.replace('#','');
+      navigate(hash);
+      console.log("Hash detected: "+hash+", setting nav"+afterhash+" parent as the active tab.");
     } else {
-    // Hide everything, put first to avoid a split second of seeing everything | EDIT: Nevermind, putting hidden in html element works better, so the browser doesn't render it at all.
-    $(".content").hide();
-    // Start by only showing random string generator
-    $("#dashboard").fadeIn(1000);
-    console.log("Init with #rsgen");
+      navigate("#dashboard");
     }
 
-    // Handle navbar
-    $(".nav-link").click(function() {
-        var navLink = $(this);
-        var navItems = $(".nav-item");
-        var navItem = navLink.parent();
-
-        navItems.prop("class", "nav-item");
-        navItem.prop("class", "nav-item active");
-
-        // $(".nav-link").prop("class", "nav-link");
-        // $(this).prop("class", "nav-link active");
-
+    /* ───────────────────────────────────────────────────────────────────── */
+    /*                               Click link                              */
+    /* ───────────────────────────────────────────────────────────────────── */
+    $(".link").click(function() {
         var elementToShow = $(this).attr("href");
-        $(".content").hide();
-        $(elementToShow).fadeIn();
+
+        navigate(elementToShow);
 
         if (elementToShow == undefined) {
             console.log("unable to show "+elementToShow);
@@ -178,11 +256,7 @@ $( document ).ready(function() {
 
     // turn off all autocomplete
     $(".form-control").prop("autocomplete", "off");
-
-
-
-
-
-
+    $("input[type=checkbox]").addClass("form-check-input");
 });
 </script>
+</html>

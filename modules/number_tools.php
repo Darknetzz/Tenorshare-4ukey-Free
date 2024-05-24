@@ -2,7 +2,7 @@
 <div class="card card-primary">
 <h1 class="card-header">Number Generator</h1>
     <div class="card card-body">
-        <form class="form" action="gen.php" method="POST" id="numgen">
+        <form class="form" action="gen.php" method="POST" id="numgen" data-action="numgen">
             Generate a number between
             <?php
             if (isset($_POST['numgenfrom']) && isset($_POST['numgento'])) {
@@ -18,9 +18,9 @@
             <input type="text" name="numgenseed" class="form-control" value="" placeholder="Optional">
             </div>
             <br>
-            <input type="submit" value="Generate" class="btn btn-success">
+            <?= submitBtn("numgen") ?>
+            <div class="responseDiv" id="numgenresponse"></div>
         </form>
-    <div id="numgenresponse"></div>
     </div>
 </div>
 </div>

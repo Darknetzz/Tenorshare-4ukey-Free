@@ -2,24 +2,37 @@
 <div class="card card-primary">
 <h1 class="card-header">ROT</h1>
 <div class="card card-body">
-<form class="form" action="gen.php" method="POST" id="rot">
+<form class="form" action="gen.php" method="POST" data-action="rot">
   <?php
   if (isset($_POST['rot'])) {
-  $rot = $_POST['rot'];
-  $rotations = $_POST['rotations'];
+    $rot = $_POST['rot'];
+    $rotations = $_POST['rotations'];
   }
   else {
-  $rot = NULL;
-  $rotations = NULL;
+    $rot = NULL;
+    $rotations = NULL;
   }
-  echo '<input type="text" name="rot" class="form-control" value="'.$rot.'">';
-  echo '<input type="number" name="rotations" id="rotations" class="form-control" value="'.$rotations.'" placeholder="Optional: Amount of rotations (13 default)">';
+  echo '
+  <div class="form-floating mb-3">
+    <textarea name="rot" class="form-control" id="rotInput" placeholder="Input" style="height:200px;">'.$rot.'</textarea>
+    <label for="rotInput">Input</label>
+  </div>
+
+  ';
+  echo '<input type="number" name="rotations" id="rotations" class="form-control mb-1" value="'.$rotations.'" placeholder="Optional: Amount of rotations (13 default)" style="display:none;">';
   echo '<input type="hidden" name="bruteforce" value="0">';
-  echo '<label><input type="checkbox" name="bruteforce" id="rotbruteforce" value="1"> Bruteforce</label><br>';
+  echo '
+
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" name="bruteforce" id="rotbruteforce" value="1" role="switch" checked>
+    <label class="form-check-label" for="rotbruteforce">Bruteforce</label>
+  </div>
+
+  <br>';
+  echo submitBtn("rot", "action", "Generate", "arrow-repeat")
   ?>
-  <input type="submit" name="rot" value="Generate" class="btn btn-success">
+  <div class="responseDiv" id="rotresponse"></div>
 </form>
- <div id="rotresponse"></div>
 </div>
 </div>
 </div>
